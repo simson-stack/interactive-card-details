@@ -1,0 +1,210 @@
+:root{
+--Linear-gradient-active: hsl(249, 99%, 64%); 
+--Linear-gradient-nonactive:hsl(278, 94%, 30%);
+--Red: hsl(0, 100%, 66%);
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dark-violet: hsl(278, 68%, 11%);
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Manrope", serif;
+    letter-spacing: 2px;
+}
+.main-box {
+    display: flex;
+}
+.left-side{
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../interactive-card-details-form-main/images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+}
+.card-front {
+    position: relative;
+    margin-left: 35%;
+    max-width: 32vw;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.card-front img{
+    max-width: 32vw;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main img{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-front-logo{
+    max-height: max-content;
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    box-shadow: none !important;
+    width: 65px;
+}
+.card-content {
+    position: absolute;
+    top: 54%;
+    left: 10%;
+}
+.card-front .name-content {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+.card-front .date-content {
+    position: absolute;
+    display: flex;
+    bottom: 10%;
+    right: -90px;
+}
+.card-content {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    width: 400px;
+}
+.content {
+    color: white;
+    font-weight: 200;
+    font-size: 12px;
+}
+.card-back {
+    margin-left: 60%;
+    border-bottom-right-radius: 10px;
+}
+.card-back img {
+    max-width: 32vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.right-side {
+    align-self: center;
+    padding-left: 400px;
+}
+input[type='text'], input[id='number'] {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 385px;
+    border: 1px solid black;
+}
+input[id='exp-date'] {
+    padding: 10px;
+    width: 85px;
+    border: 1px solid black;
+}
+.date {
+    display: flex;
+    gap: 12px;
+}
+.exp-date-cvc {
+    display: flex;
+    flex-direction: row;
+    width: 385px;
+}
+.cvc-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+input[id='cvc'] {
+    padding: 10px;
+    width: 165px;
+    border: 1px solid black;
+}
+.form-item {
+    padding-bottom: 30px;
+}
+.form-item input {
+    border-radius: 7px;
+}
+input {
+    margin-top: 10px;
+}
+input:focus {
+    outline: none;
+    border: 1.5px solid #7836A8;
+}
+button {
+    margin-top: 20px;
+    width: 389px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--Very-dark-violet);
+    color: white;
+}
+button:hover {
+    cursor: pointer;
+    scale: 1.01;
+    background-color: #7836A8 ;
+}
+.error p {
+    font-size: 11px;
+    color: red;
+    margin-top: 5px;
+}
+.error {
+    display: none;
+}
+.complete-block {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+@media (max-width: 1000px){
+    .main-box {
+        flex-direction: column;
+    }
+    .left-side {
+        width: 100vw;
+        height: 200px;
+        background-size: cover;
+        position: relative;
+        padding-top: 150px;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    .card-front {
+        position: absolute;
+        z-index: 1;
+        left: -80px;
+        min-width: 280px;
+    }
+    .card-front .main, .card-back .main {
+        min-width: 280px;
+    }
+    .card-back {
+        position: absolute;
+        top: 50px;
+        left: -90px;
+    }
+    .card-content {
+        max-width: 100%;
+        font-size:medium;
+    }
+    .date-content {
+        left: 200px;
+    }
+    .right-side {
+        padding: 0;
+    }
+}

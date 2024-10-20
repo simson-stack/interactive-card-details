@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interactive card details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="left-side">
+        <div class="card-front">
+          <img class="main" src="./images/bg-card-front.png" alt="">
+          <div class="card-content">
+            8800 7284 2713 8123
+          </div>
+          <p class="name-content content">FELICIA LEIRE</p>
+          <div class="date-content content">
+            <p class="month-content content">09</p>
+            <p class="content">/</p>
+            <p class="year-content content">00</p>
+          </div>
+          <img class="card-front-logo" src="./images/card-logo.svg" alt="">
+        </div>
+        <div class="card-back">
+          <img class="main" src="./images/bg-card-back.png" alt="">
+        </div>
+      </div>
+      <div class="right-side">
+        <form class="form" action="">
+          <div class="name-section form-item">
+            <label for="name">CARDHOLDER NAME</label>
+            <input type="text" name="name" id="name" placeholder="FELICIA LEIRE" maxlength="30">
+            <div class="name-error error">
+              <p>Enter the right details</p>
+            </div>
+          </div>
+          <div class="number-section form-item">
+            <label for="number">CARD NUMBER</label>
+            <input type="number" name="number" id="number" placeholder="8800 7284 2713 8123">
+            <div class="number-error error">
+              <p>Enter the right details</p>
+            </div>
+          </div>
+          <div class="exp-date-cvc form-item">
+            <div class="date-section">
+              <label for="exp-date">EXP. DATE (MM/YY)</label>
+              <div class="date">
+                <div class="month">
+                  <input 
+                  type="number" name="month" id="exp-date" class="month-input" placeholder="09">
+                  <div class="month-error error">
+                    <p>Enter the right details</p>
+                  </div>
+                </div>
+                <div class="year">
+                  <input type="number" name="year" id="exp-date" class="year-input" placeholder="00">
+                  <div class="year-error error">
+                    <p>Enter the right details</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cvc-section">
+              <label for="cvc">CVC</label>
+              <input type="number" name="cvc" id="cvc" placeholder="239">
+              <div class="cvc-error error">
+                <p>Enter the right details</p>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="complete-block">
+          <img src="./images/icon-complete.svg" alt="">
+          <h3>THANK YOU!</h3>
+          <p>We've added your card details</p>
+        </div>
+        <button id="confirm">Confirm</button>  
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
