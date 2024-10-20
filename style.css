@@ -175,7 +175,7 @@ button:hover {
         flex-direction: column;
     }
     .left-side {
-        width: 100vw;
+        width: 200vw;
         height: 200px;
         background-size: cover;
         position: relative;
